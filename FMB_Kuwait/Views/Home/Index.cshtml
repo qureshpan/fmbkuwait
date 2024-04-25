@@ -1,31 +1,66 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
+﻿
+<div class="container mx-auto mt-3">
+    <div class="mx-auto bg-white rounded-lg overflow-hidden shadow-md">
+        <div class="p-6">
+            <!-- Form Title -->
+            <h2 class="text-xl font-bold mb-4">Form Example</h2>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
-
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+            <!-- Form -->
+            <form>
+                <!-- Text Input -->
+                <div class="flex flex-wrap -mx-2 mb-4">
+                    <!-- Username Input -->
+                    <div class="w-1/3 px-2 mb-4">
+                        <label for="first_name" class="block text-sm font-medium text-gray-700">Username</label>
+                        <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John" required />
+                    </div>
+                    <!-- Age Input -->
+                    <div class="w-1/3 px-2 mb-4">
+                        <label for="age" class="block text-sm font-medium text-gray-700">Age</label>
+                        <input type="text" id="age" name="age" class="border-blue-500 mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm border-gray-300 rounded-md px-3 py-2 focus:outline-none transition duration-150 ease-in-out">
+                    </div>
+                    <!-- Salary Input -->
+                    <div class="w-1/3 px-2 mb-4">
+                        <label for="salary" class="block text-sm font-medium text-gray-700">Salary</label>
+                        <input type="text" id="salary" name="salary" class="border-blue-500 mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                    </div>
+                </div>
+                <!-- Radio Buttons -->
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700">Gender</label>
+                    <div class="mt-1">
+                        <input type="radio" id="male" name="gender" value="male" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                        <label for="male" class="ml-2 block text-sm text-gray-700">Male</label>
+                        <input type="radio" id="female" name="gender" value="female" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                        <label for="female" class="ml-2 block text-sm text-gray-700">Female</label>
+                    </div>
+                </div>
+                <!-- Dropdown -->
+                <div class="mb-4">
+                    <label for="country" class="block text-sm font-medium text-gray-700">Country</label>
+                    <select id="country" name="country" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option value="">Select a country</option>
+                        <option value="usa">USA</option>
+                        <option value="uk">UK</option>
+                        <option value="canada">Canada</option>
+                    </select>
+                </div>
+                <!-- Searchable Dropdown -->
+                <div class="mb-4">
+                    <label for="city" class="block text-sm font-medium text-gray-700">City</label>
+                    <select id="city" name="city" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                        <option value="">Select a city</option>
+                        <option value="ny">New York</option>
+                        <option value="london">London</option>
+                        <option value="toronto">Toronto</option>
+                    </select>
+                </div>
+                <!-- Buttons -->
+                <div class="flex justify-between">
+                    <button type="button" class="py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit</button>
+                    <button type="button" class="py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">Cancel</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>

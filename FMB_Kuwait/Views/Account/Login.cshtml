@@ -1,0 +1,58 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Center the login box */
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body class="bg-gray-200">
+    <div class="container mx-auto mt-3">
+        <div class="p-6">
+            <div class="center">
+                <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
+                    <h2 class="text-2xl font-semibold mb-6 text-center">Login</h2>
+                    @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+                    {
+                        <form>
+                            <div class="mb-4">
+                                <label for="username" class="block text-sm font-medium text-gray-700"></label>
+                                <input type="text" name="username" id="username" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="username" required />
+                            </div>
+                            <div class="mb-4">
+                                <label for="password" class="block text-sm font-medium text-gray-700"></label>
+                                <input type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+
+                            </div>
+                            <div class="mb-6">
+                                <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-500">Login</button>
+                            </div>
+                        </form>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/Index.js"></script>
+
+    <!-- JS THIRD PARTY PLUGINS -->
+    <!-- Google Analytics. Global site tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B73TDMXKF5"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+
+</html>
